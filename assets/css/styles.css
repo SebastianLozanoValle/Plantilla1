@@ -1,4 +1,5 @@
 :root{
+    --color-fondo: #232323;
     --color-primario:   #0277d4;
     --color-secundario:   #0277d4;
 }
@@ -12,14 +13,25 @@
     text-decoration: none;
 }
 
+body{
+    background: var(--color-fondo);
+}
 
+p, a, h1, h2, h3, h4, h5, h6{
+    color: #fff;
+}
 
 span{
-    color: var(--color-primario);
+    color: var(--color-primario) !important;
 }
 
 nav{
-    width: 100vw;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: solid 1px #ccc;
 }
 
 .hidden{
@@ -30,7 +42,7 @@ nav{
 
 .flex{
     display: flex;
-    background-color: #fff;
+    background-color: var(--color-fondo);
 }
 
 .logo{
@@ -56,7 +68,7 @@ nav{
 }
 
 .mob-nav{
-    height: 100%;
+    height: 900px;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.5); /* Fondo con transparencia (blanco en este caso) */
     backdrop-filter: blur(10px); /* Ajusta la cantidad de desenfoque según tus preferencias */
@@ -66,20 +78,27 @@ nav{
 
 .mob-nav li{
     padding: .5rem 0 1rem 1rem;
-    border: solid 1px #ccc;
+    border-bottom: solid 1px var(--color-fondo);
 }
 
 .mob-nav li a{
     transition: .25s;
-    color: black;
     display: block;
 }
 
 .mob-nav li a:hover{
     font-size: 2rem;
-    color: var(--color-secundario) !important;
+    color: var(--color-secundario);
 }
 
 .container{
     transition: .5s;
+}
+
+main{
+    margin-top: 70px;
+}
+
+i{
+    color: #fff;
 }
