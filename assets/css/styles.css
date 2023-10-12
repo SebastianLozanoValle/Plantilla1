@@ -426,17 +426,77 @@ i{
 }
 
 .diferenciadores{
+    position: relative;
+    align-items: center;
+    /* height: 300px; */
     font-size: smaller;
     display: flex;
+
+    /* background-image: url('../img/imagen2.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 50%; */
 }
 
 .lista{
+    position: relative;
+}
+
+.sub-seccion::before{
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 10vw;
+    width: 5%;
+    height: 95%;
+    background-color: var(--color-terciario);
+}
+
+.sub-seccion::after{
+    content: "";
+    position: absolute;
+    top: 145%;
+    left: 10vw;
+    width: 1.2%;
+    height: 83%;
+    background-color: var(--color-secundario);
+}
+
+.lista:last-of-type{
+    padding: 1.5rem;
+    background-color: var(--color-primario);
+    height: 100%;
     width: 50%;
+    color: #fff;
+}
+
+.lista:last-of-type::before{
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 0%;
+    height: 100%;
+    width: 5%;
+    background-color: var(--color-terciario);
+}
+
+.lista:last-of-type::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 90%;
+    height: 2.5%;
+    width: 100%;
+    background-color: var(--color-terciario);
 }
 
 .lista ul{
-    list-style: disc;
-    padding: 1.25rem .5rem;
+    /* list-style: disc; */
+    padding: 1.25rem .25rem;
+}
+
+.imagen{
+    width: 100%;
 }
 
 /* -------- */
