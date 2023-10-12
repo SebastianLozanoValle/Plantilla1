@@ -96,8 +96,8 @@ nav{
     cursor: pointer;
 }
 
-.nav-bars:hover{
-
+.nav-bars:active{
+    transition: .25s;
     font-size: 3rem;
     color: var(--color-terciario);
 }
