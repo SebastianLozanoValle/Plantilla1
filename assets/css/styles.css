@@ -1,16 +1,24 @@
 :root{
-    --color-fondo: #232323;
-    --color-primario:   #0277d4;
-    --color-secundario:   #0277d4;
+    --color-fondo: #221e2e;
+    --color-primario:   #5f2aff;
+    --color-secundario:   #6430ff;
+    --color-terciario: #f5014c;
+    --fuente-titulo:
 }
 
 *{
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Rubik', sans-serif;
+    /* font-family: 'Nunito', sans-serif;
+    font-family: 'Rubik', sans-serif; */
     margin: 0;
     padding: 0;
-    list-style: none;
     text-decoration: none;
+    font-family: 'Audiowide', cursive;
+    /* font-family: 'Nunito', sans-serif;
+    font-family: 'Rubik', sans-serif; */
+}
+
+ul{
+    list-style: none;
 }
 
 body{
@@ -21,8 +29,31 @@ p, a, h1, h2, h3, h4, h5, h6{
     color: #fff;
 }
 
-span{
-    color: var(--color-primario) !important;
+.static_nav{
+    background-color: var(--color-fondo);
+    height: 70px;
+}
+
+.logo{
+    transition: .5s;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.75rem;
+    height: 2rem;
+    fill: var(--color-primario);
+}
+
+.nombre{
+    transition: .5s;
+    position: absolute;
+    top: 1.8rem;
+    left: 4.25rem;
+    height: 1.5rem;
+    fill: #fff;
+}
+
+.nombre:hover{
+    fill: var(--color-primario);
 }
 
 nav{
@@ -31,7 +62,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: solid 1px #ccc;
+    z-index: 1;
 }
 
 .hidden{
@@ -45,7 +76,7 @@ nav{
     background-color: var(--color-fondo);
 }
 
-.logo{
+.titulo_p{
     font-size: 2rem;
     position: relative;
     margin: .5rem 0 1rem 1rem;
@@ -55,7 +86,7 @@ nav{
     transition: .5s;
     font-size: 2rem;
     position: absolute;
-    top: .5rem;
+    top: 1.5rem;
     right: 1.75rem;
     margin: 0 0 1rem 0;
     cursor: pointer;
@@ -64,13 +95,14 @@ nav{
 .nav-bars:hover{
 
     font-size: 3rem;
-    color: var(--color-primario);
+    color: var(--color-terciario);
 }
 
 .mob-nav{
+    text-align: center;
     height: 900px;
     width: 100vw;
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo con transparencia (blanco en este caso) */
+    background-color: var(--color-fondo); /* Fondo con transparencia (blanco en este caso) */
     backdrop-filter: blur(10px); /* Ajusta la cantidad de desenfoque según tus preferencias */
     position: absolute;
 
@@ -88,7 +120,7 @@ nav{
 
 .mob-nav li a:hover{
     font-size: 2rem;
-    color: var(--color-secundario);
+    color: var(--color-terciario);
 }
 
 .container{
@@ -99,6 +131,343 @@ main{
     margin-top: 70px;
 }
 
+.inicio{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.inicio p{
+    padding: 0 1.25rem;
+}
+
+.titulo_nombre{
+    margin-top: 3rem;
+    height: 2.5rem;
+    padding: 1.25rem;
+}
+
+.detalle_servicios{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas con igual espacio */
+    grid-gap: 1.25rem; /* Espacio entre las celdas del grid */
+    padding: 1.25rem 2.5rem; /* Espacio entre el borde del contenedor y las celdas del grid */
+    color: #fff;
+    font-size: small;
+}
+
+.detalle_servicios ul{
+    list-style: disc;
+}
+
+.sub_uno{
+    background-image: url('../img/imagen_inicio.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 75%;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, var(--color-secundario), var(--color-primario), var(--color-terciario), var(--color-secundario));
+    background-size: 300%;
+    margin: 1.25rem;
+    padding: 0 1rem;
+}
+
+button:hover {
+animation: ani 8s linear infinite;
+border: none;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.sub-seccion{
+    background-color: #fff;
+    padding: 1.25rem;
+}
+
+.sub-seccion h2{
+    color: var(--color-terciario);
+    font-weight: lighter;
+    font-size: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.sub-seccion p{
+    color: #000;
+}
+
+.slider {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 25%;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 2s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: max-content; /* Usamos max-content en lugar de un ancho fijo basado en el número de elementos */
+}
+
+.slider .slide {
+    width: 100px;
+    padding: 0 2rem;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(calc(-100px * 1));
+    }
+
+    40% {
+        transform: translateX(calc(-100px * 2));
+    }
+
+    60% {
+        transform: translateX(calc(-100px * 3));
+    }
+
+    80% {
+        transform: translateX(calc(-100px * 4));
+    }
+
+    100% {
+        transform: translateX(calc(-98.5px * 5));
+    }
+}
+
 i{
     color: #fff;
+}
+
+/* --------- */
+
+
+
+.card {
+    width: 210px;
+    height: 400px;
+    background: black;
+    border-radius: 35px;
+    border: 2px solid rgb(40, 40, 40);
+    padding: 7px;
+    position: relative;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
+    margin: 0 auto;
+}
+
+.card-int {
+    background-image: linear-gradient(to right bottom, #ff0000, #ff0045, #ff0078, #ea00aa, #b81cd7, #8a3ad6, #5746cf, #004ac2, #003d94, #002e66, #001d3a, #020812);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    height: 100%;
+    border-radius: 25px;
+    transition: all 0.6s ease-out;
+    overflow: hidden;
+    font-weight: lighter;
+}
+
+.card:hover .card-int {
+    background-position: 100% 100%;
+}
+
+.top {
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    transform: translate(50%, 0%);
+    width: 35%;
+    height: 18px;
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.speaker {
+    position: absolute;
+    top: 2px;
+    right: 50%;
+    transform: translate(50%, 0%);
+    width: 40%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: rgb(20, 20, 20);
+}
+
+.camera {
+    position: absolute;
+    top: 6px;
+    right: 84%;
+    transform: translate(50%, 0%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.048);
+}
+
+.int {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: rgba(0, 0, 255, 0.212);
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+    position: absolute;
+    width: 2px;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+    height: 45px;
+    top: 30%;
+    right: -4px;
+    background-image: linear-gradient(to right, #111111, #222222, #333333, #464646, #595959);
+}
+
+.btn2,
+.btn3 {
+    transform: scale(-1);
+    left: -4px;
+}
+
+.btn2,
+.btn3 {
+    transform: scale(-1);
+    height: 30px;
+}
+
+.btn2 {
+    top: 26%
+}
+
+.btn3 {
+    top: 36%
+}
+
+.hello {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 35px;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.hiddens {
+    display: block;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.card:hover .hiddens {
+    opacity: 1;
+}
+
+.card:hover .hello {
+    transform: translateY(-20px);
+}
+
+.columnas{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.separador{
+    margin: 10vh 0;
+}
+
+.diferenciadores{
+    font-size: smaller;
+    display: flex;
+}
+
+.lista{
+    width: 50%;
+}
+
+.lista ul{
+    list-style: disc;
+    padding: 1.25rem .5rem;
+}
+
+/* -------- */
+
+footer {
+    margin-top: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el lado izquierdo del footer */
+.footer-left {
+    font-size: smaller;
+    text-align: left;
+}
+
+.footer-left img {
+    height: 15px;
+    /* max-width: 100px;
+    max-height: 100px; */
+}
+
+/* Estilos para el lado derecho del footer */
+.footer-right {
+    font-size: small;
+    text-align: right;
+}
+
+.footer-right p{
+    color: #ccc;
 }
