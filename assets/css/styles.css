@@ -23,6 +23,7 @@ ul{
 
 body{
     background: var(--color-fondo);
+    overflow: hidden;
 }
 
 p, a, h1, h2, h3, h4, h5, h6{
