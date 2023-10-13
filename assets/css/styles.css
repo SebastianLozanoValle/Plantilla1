@@ -440,12 +440,13 @@ i{
 
 .lista{
     position: relative;
+    color: #fff;
 }
 
 .sub-seccion::before{
     content: "";
     position: absolute;
-    top: 45%;
+    top: 45vh;
     right: 10vw;
     width: 5%;
     height: 95%;
@@ -455,10 +456,10 @@ i{
 .sub-seccion::after{
     content: "";
     position: absolute;
-    top: 145%;
+    top: 145vh;
     left: 10vw;
     width: 1.2%;
-    height: 83%;
+    height: 65%;
     background-color: var(--color-secundario);
 }
 
@@ -467,7 +468,6 @@ i{
     background-color: var(--color-primario);
     height: 100%;
     width: 50%;
-    color: #fff;
 }
 
 .lista:last-of-type::before{
@@ -477,7 +477,7 @@ i{
     top: 0%;
     height: 100%;
     width: 5%;
-    background-color: var(--color-terciario);
+    background-color: #fff;
 }
 
 .lista:last-of-type::after{
@@ -487,7 +487,7 @@ i{
     top: 90%;
     height: 2.5%;
     width: 100%;
-    background-color: var(--color-terciario);
+    background-color: #fff;
 }
 
 .lista ul{
@@ -498,6 +498,117 @@ i{
 .imagen{
     width: 100%;
 }
+
+.h2{
+
+}
+
+/* ------------ */
+
+/* Estilos generales */
+/* Estilos generales */
+.contaainer {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 10rem 0;
+    background-color: #fff;
+}
+
+.titulito{
+    font-size: xx-large;
+    color: var(--color-terciario);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pricing-grid {
+    width: 80vw;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8;
+}
+
+/* Estilos de las tarjetas de precios */
+.pricing-card {
+    background-color: var(--color-fondo);
+    width: 90%;
+    /* margin: 0 auto; */
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    /* margin: 16px 0; */
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: scale(1.10);
+}
+
+.pricing-card-alt {
+    transform: scale(1.05);
+    background-color: var(--color-terciario);
+}
+
+.pricing-icon {
+    width: 20px;
+    margin: 0 auto;
+    margin-top: -3rem;
+    background-color: #fff;
+}
+
+.pricing-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.pricing-price {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pricing-features {
+    text-align: center;
+    font-weight: medium;
+}
+
+.feature-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #000;
+}
+
+.pricing-button {
+    background-color: #000;
+    width: 200px;
+    font-weight: medium;
+    margin: 6px auto;
+    padding: 6px 12px;
+}
+
+.pricing-button-alt {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+        margin: 16px 0;
+    }
+}
+
+
+/* Estilos adicionales según sea necesario */
+
 
 /* -------- */
 
