@@ -21,10 +21,6 @@ ul{
     list-style: none;
 }
 
-main{
-    overflow-x: hidden;
-}
-
 body{
     background: var(--color-fondo);
 }
@@ -66,7 +62,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 4;
 }
 
 .hidden{
@@ -132,6 +128,7 @@ nav{
 }
 
 main{
+    overflow-x: hidden;
     margin-top: 70px;
 }
 
@@ -145,7 +142,7 @@ main{
 }
 
 .titulo_nombre{
-    margin-top: 3rem;
+    margin-top: 4rem;
     height: 2.5rem;
     padding: 1.25rem;
 }
@@ -220,7 +217,7 @@ border: none;
 .slider {
     width: 200px;
     height: auto;
-    margin: 0 auto;
+    margin: 1rem auto;
     overflow: hidden;
     border-radius: 25%;
 }
@@ -413,12 +410,18 @@ i{
 }
 
 .columnas{
+    vertical-align: middle;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: auto;
+}
+
+.con{
+    margin: 0 auto;
+    width: 80%;
 }
 
 .separador{
@@ -545,6 +548,7 @@ i{
 
 .pricing-card:hover {
     transform: scale(1.10);
+    z-index: 3;
 }
 
 .pricing-card-alt {
@@ -595,19 +599,91 @@ i{
     color: #fff;
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-card {
-        margin: 16px 0;
-    }
-}
-
 
 /* Estilos adicionales según sea necesario */
+
+.mini-contenedor {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1fr); /* Dos columnas de tamaño igual */
+    gap: 20px; /* Espacio entre las columnas */
+}
+  /* Estilos para los elementos dentro de las columnas */
+.mini-columna {
+    width: 35vw;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #fff;
+    /* border: 1px solid #ccc;
+    background-color: #f0f0f0; */
+}
+
+.mini-columna i{
+    font-size: 4.5rem;
+    color: var(--color-terciario);
+}
+
+.mini-columna hr{
+    border-color: var(--color-primario);
+}
+
+.mini-columna p{
+    padding: 0;
+    padding-top: .5rem;
+}
+
+.card-galery-grid{
+    width: 90vw;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8;
+}
+
+.card-galery {
+    padding: 20px;
+    margin: 1rem 0;
+    width: 80%;
+    background: var(--color-fondo);
+    box-shadow: 5px 5px 8px var(--color-fondo),
+        -5px -5px 8px var(--color-terciario);
+    transition: 0.4s;
+}
+
+.card-galery:hover {
+    translate: 0 -10px;
+}
+
+.card-galery-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-terciario);
+    margin: 15px 0 0 10px;
+}
+
+.card-galery-image {
+    min-height: 170px;
+    background-color: #313131;
+    /* box-shadow: inset 5px 5px 3px var(--color-primario),
+        inset -5px -5px 3px var(--color-fondo); */
+}
+
+.card-galery-body {
+    margin: 13px 0 0 10px;
+    color: #fefefe;
+    font-size: 15px;
+}
+
+.footer {
+    float: right;
+    margin: 28px 0 0 18px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.by-name {
+    font-weight: 700;
+}
 
 
 /* -------- */
@@ -646,3 +722,58 @@ footer {
 .footer-right p{
     color: #ccc;
 }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-galery-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+        margin: 16px 0;
+    }
+
+    .card-galery{
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .mini-contenedor {
+        grid-template-columns: 1fr 1fr 1fr minmax(0, 1fr);
+    }
+
+    .mini-columna{
+        width: 15vw;
+    }
+
+    .slider{
+        margin: 1rem 50vw;
+    }
+
+    .columnas{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+@media (min-width: 430px) {
+    .sub_uno{
+        background-size: 50%;
+    }
+    .detalle_servicios{
+        width: 45%;
+    }    
+}
+
+@media (min-width: 1580px) {
+    .titulo_nombre{
+    margin-top: 8.5rem;
+    }
+}
+
