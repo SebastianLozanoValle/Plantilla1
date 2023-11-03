@@ -210,43 +210,6 @@ main{
     background-size: 75%;
 }
 
-button, .btn {
-    text-decoration: none;
-    border: none;
-    font-size: 14px;
-    font-family: inherit;
-    color: #fff;
-    height: 3em;
-    line-height: 2em;
-    text-align: center;
-    background: linear-gradient(90deg, var(--color-secundario), var(--color-primario), var(--color-terciario), var(--color-secundario));
-    background-size: 300%;
-    margin: 1.25rem;
-    padding: 0 1rem;
-}
-
-.btn{
-    display: block;
-    padding: 1rem 2rem;
-    width: 150px;
-    height: auto;
-}
-
-button:hover, .btn:hover {
-animation: ani 8s linear infinite;
-border: none;
-}
-
-@keyframes ani {
-    0% {
-        background-position: 0%;
-    }
-
-    100% {
-        background-position: 400%;
-    }
-}
-
 .sub-seccion{
     width: 100;
     background-color: #fff;
@@ -800,6 +763,10 @@ footer {
     max-height: 100px; */
 }
 
+.footer-left p{
+    color: #ccc;
+}
+
 /* Estilos para el lado derecho del footer */
 .footer-right {
     font-size: small;
@@ -840,7 +807,7 @@ footer {
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
@@ -963,4 +930,66 @@ footer {
 
 textarea{
     resize: none;
+}
+
+button, .btn{
+    --bg: #4000ff;
+    --text-color: #fff;
+    position: relative;
+    width: 150px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 1;
+    letter-spacing: 1px;
+    box-shadow: var(--color-secundario) 0px 7px 2px, #000 0px 8px 5px;
+}
+
+button:hover, .btn:hover {
+    top: 4px;
+    box-shadow: #4000ff 0px 3px 2px,#000 0px 3px 5px;
+}
+
+.btn{
+    display: block;
+    padding: 1rem 2rem;
+    width: 200px;
+    height: auto;
+}
+
+p, li{
+    font-size: 1rem;
+}
+
+@media (min-width: 1050px){
+    p, li{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1085px){
+    p, li{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1150px){
+    p, li{
+        font-size: 1.75rem;
+    }
+}
+
+
+
+.con .btn{
+    left: 1.25rem;
+}
+
+footer p {
+    font-size: 1rem;
 }
